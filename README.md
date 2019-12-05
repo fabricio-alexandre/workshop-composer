@@ -32,6 +32,11 @@ docker-compose up (sobe o ambiente docker)
 
 docker-compose exec php7 composer require vlucas/phpdotenv -vvv (Adiciona uma dependencia - o "-vvv" liga o verbose no modo porreta)
 
+docker-compose exec php7 composer dump-autoload
+docker-compose exec php7 composer require
+docker-compose exec php7 composer install
+docker-compose exec php7 composer update
+
 composer require (Adiciona nova dependencia)
 composer install (Baixei o projeto e quero instalar)
 
