@@ -16,3 +16,11 @@ RUN chmod +x /usr/bin/composer
 
 # ALTERA A PASTA DE TRABALHO DEFAULT
 WORKDIR /php7
+
+# COPIA ARQUIVO PARA O AMBIENTE
+# COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+# # EXECUTA SCRIPT APÓS SUBIR O AMBIENTE
+# ENTRYPOINT [ "sh", "/usr/local/bin/entrypoint.sh "]
+
+COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+ENTRYPOINT ["sh","/usr/local/bin/entrypoint.sh"]

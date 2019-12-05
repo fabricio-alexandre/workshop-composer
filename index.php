@@ -1,5 +1,6 @@
 <?php
 
+use Cocur\Slugify\Slugify;
 use Dotenv\Dotenv;
 
 require_once 'vendor/autoload.php';
@@ -9,4 +10,7 @@ if (file_exists('.env')) {
   $dotenv->load();
 }
 
-echo "<pre>"; print_r($_ENV); echo "</pre>";
+$slugify = new Slugify();
+$slug = $slugify->slugify('Hello World!');
+
+echo "<pre>"; print_r($slug); echo "</pre>";
